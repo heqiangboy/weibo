@@ -4308,7 +4308,7 @@ input[type=button].btn-block {
 .nav-tabs .nav-link.active,
 .nav-tabs .nav-item.show .nav-link {
   color: #495057;
-  background-color: #000;
+  background-color: #fff;
   border-color: #dee2e6 #dee2e6 #fff;
 }
 
@@ -10669,5 +10669,33 @@ body {
 
 nav.navbar.navbar-expand-lg {
   margin-bottom: 20px;
+}
+
+/* footer */
+
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid #eaeaea;
+  color: #777;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+footer a {
+  color: #555;
+}
+
+footer a:hover {
+  color: #222;
+}
+
+footer small {
+  float: left;
+}
+
+footer img.brand-icon {
+  width: 17px;
+  height: 17px;
 }
 

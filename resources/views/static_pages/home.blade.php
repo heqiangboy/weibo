@@ -13,4 +13,7 @@
       <a class="btn btn-lg btn-success" href="#" role="button">现在注册</a>
     </p>
   </div>
+<!--   <div id='app'>
+  	<example-component/ >
+  </div> -->
 @stop

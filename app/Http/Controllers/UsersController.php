@@ -48,13 +48,13 @@ class UsersController extends Controller
         return redirect()->route('users.show', [$user]);
     }
 
-        public function edit(User $user)
+    public function edit(User $user)
     {
         $this->authorize('update', $user);
         return view('users.edit', compact('user'));
     }
 
-    	public function update(User $user, Request $request)
+    public function update(User $user, Request $request)
     {
         $this->authorize('update', $user);
         $this->validate($request, [
@@ -74,9 +74,17 @@ class UsersController extends Controller
         return redirect()->route('users.show', $user);
     }
 
-        public function index()
+    public function index()
     {
         $users = User::paginate(10);
         return view('users.index', compact('users'));
+    }
+
+    public function destroy(User $user)
+    {
+        $this->authorize('destroy', $user);
+        $user->delete();
+        session()->flash('success', '成功删除用户！');
+        return back();
     }
 }
